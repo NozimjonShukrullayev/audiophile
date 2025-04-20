@@ -1,0 +1,120 @@
+.home-hero {
+	overflow: hidden;
+	padding: $paddingy-26;
+	background-color: $color-dark;
+
+	&_container {
+		display: grid;
+		position: relative;
+		isolation: isolate;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	&_contents {
+		gap: 8rem;
+		grid-row: 1;
+		text-align: unset;
+		grid-column: 1 / 1;
+		position: relative;
+		margin-inline: unset;
+		padding-block-start: 6.8rem;
+		padding-block-end: 9.87rem;
+
+		.overline {
+			opacity: $opacity-50;
+			color: $color-white !important;
+		}
+
+		.heading1 {
+			margin: $marginy-24;
+			color: $color-white !important;
+		}
+
+		.paragraph {
+			width: 70%;
+			margin: 1.75rem 0;
+			opacity: $opacity-75;
+			color: $color-white !important;
+		}
+	}
+
+	&_picture {
+		grid-row: 1;
+		width: 130%;
+		z-index: -1;
+		height: auto;
+		object-fit: cover;
+		position: absolute;
+		inset-block-end: 0;
+		grid-column: span 2;
+		opacity: $opacity-100;
+		inset-inline-start: -13%;
+	}
+
+	@include getBreakpoint(lg) {
+		&_container {
+			display: grid;
+			position: relative;
+			isolation: isolate;
+			grid-template-columns: 1fr;
+		}
+
+		&_contents {
+			width: 70%;
+			grid-row: 1;
+			grid-column: unset;
+			text-align: center;
+			margin-inline: auto;
+			padding-block-start: 5.75rem;
+			padding-block-end: 10rem;
+
+			.paragraph {
+				width: 80%;
+				margin: 1.75rem auto;
+			}
+		}
+
+		&_picture {
+			width: 110%;
+			grid-column: 1;
+			inset: -20% -5%;
+			opacity: $opacity-50;
+		}
+	}
+
+	@include getBreakpoint(md) {
+		padding: $paddingy-16;
+
+		&_contents {
+			width: 100% !important;
+
+			.paragraph {
+				width: 90% !important;
+			}
+		}
+
+		&_picture {
+			width: 110vw !important;
+			inset: -65% -10% !important;
+		}
+	}
+
+	@include getBreakpoint(sm) {
+		&_picture {
+			width: 100vw !important;
+			inset: -70% -5% !important;
+		}
+
+		&_contents {
+			padding-block-start: 2.8rem !important;
+			padding-block-end: 5.87rem !important;
+		}
+	}
+
+	@include getBreakpoint(xs) {
+		&_picture {
+			width: 110vw !important;
+			inset: -40% -10% !important;
+		}
+	}
+}

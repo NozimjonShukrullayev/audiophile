@@ -1,0 +1,190 @@
+.home-products {
+	&_container {
+		gap: 3rem;
+		display: grid;
+		padding-block: 5.25rem;
+	}
+
+	&_type_one {
+		display: grid;
+		overflow: hidden;
+		isolation: isolate;
+		position: relative;
+		padding-block-start: 3rem;
+		border-radius: $rounded-8;
+		grid-template-columns: 1fr 1fr;
+		background-color: $color-primary;
+
+		&_pattern {
+			z-index: -1;
+			width: 83%;
+			height: auto;
+			position: absolute;
+			inset-inline-start: 50%;
+			inset-block-start: 50%;
+			translate: -75% -33%;
+		}
+
+		&_picture {
+			width: auto;
+			height: 80.5%;
+			margin-inline: unset;
+			position: absolute;
+			inset-inline-start: 12.5%;
+			inset-block-start: 22%;
+		}
+
+		&_subgroup {
+			gap: 1.2rem;
+			display: flex;
+			text-align: unset;
+			align-items: unset;
+			align-self: center;
+			padding-inline: 5.93rem;
+			flex-direction: column;
+			padding-block-end: 7.75rem;
+			padding-block-start: 5.31rem;
+
+			.heading1,
+			p {
+				color: $color-white;
+			}
+		}
+	}
+
+	&_type_two {
+		display: grid;
+		align-items: center;
+
+		& > * {
+			grid-column: 1 / -1;
+			grid-row: 1;
+		}
+
+		&_picture {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: $rounded-8;
+		}
+
+		&_subgroup {
+			padding-inline-start: 5.93rem;
+			padding-block-end: 3.93rem;
+
+			h4.heading4 {
+				margin-block: 2rem;
+			}
+		}
+	}
+
+	&_type_three {
+		gap: 1.87rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: minmax(0, 1fr);
+
+		&_picture {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: $rounded-8;
+		}
+
+		&_subgroup {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			border-radius: $rounded-8;
+			padding-inline-start: 5.93rem;
+			padding-inline-end: 5.93rem;
+			background-color: $color-light-2;
+
+			h4.heading4 {
+				margin-block: 2rem;
+			}
+		}
+	}
+
+	@include getBreakpoint(lg) {
+		&_type_one {
+			gap: unset;
+			padding-block: 0rem 4rem;
+			grid-template-columns: 1fr;
+
+			&_pattern {
+				inset-inline-start: 70%;
+				inset-block-start: 10%;
+			}
+
+			&_picture {
+				width: 178px;
+				display: block;
+				height: auto;
+				display: grid;
+				overflow: hidden;
+				isolation: isolate;
+				position: relative;
+				inset-inline-start: unset;
+				margin-inline: auto;
+				padding-block-end: 3rem;
+				padding-block-start: unset;
+			}
+
+			&_subgroup {
+				text-align: center;
+				padding-block-start: 0rem;
+				padding-block-end: 0.75rem;
+
+				p {
+					margin: unset;
+					opacity: $opacity-75;
+				}
+			}
+		}
+
+		&_type_two_subgroup {
+			padding-inline-start: 3.93rem;
+		}
+
+		&_type_three_subgroup {
+			padding-inline-start: 2.93rem !important;
+		}
+	}
+
+	@include getBreakpoint(md) {
+		&_container {
+			grid-gap: 1.5rem;
+			padding-block: 1.25rem;
+		}
+
+		&_type_one {
+			gap: 2rem;
+			position: relative;
+			padding-block: 1.43rem 3rem;
+
+			&_picture {
+				display: block !important;
+				margin-inline: auto;
+			}
+
+			&_subgroup {
+				padding-inline: 2rem;
+				padding-inline-start: 2rem;
+			}
+		}
+
+		&_type_two_subgroup {
+			padding-inline-start: 1.93rem !important;
+		}
+
+		&_type_three {
+			grid-template-columns: 1fr;
+
+			&_subgroup {
+				padding-inline-start: 1.93rem !important;
+				padding-inline-end: 0.93rem;
+			}
+		}
+	}
+}

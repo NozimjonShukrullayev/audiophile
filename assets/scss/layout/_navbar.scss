@@ -1,0 +1,80 @@
+.navbar {
+	z-index: 99;
+	position: sticky;
+	inset-block-start: 0;
+	background-color: $color-dark;
+
+	&_container {
+		gap: 2.62rem;
+		display: flex;
+		position: relative;
+		color: $color-white;
+		align-items: center;
+		margin-inline: auto;
+		padding-block: 1.5rem;
+		justify-content: space-between;
+		border-bottom: 1.5px solid $color-section-border;
+	}
+
+	&_toggle {
+		display: none;
+	}
+
+	&_mobile_tabs {
+		display: none;
+	}
+
+	&_tabs {
+		display: block;
+
+		&_list {
+			gap: 2.12rem;
+			display: flex;
+			flex-direction: row;
+		}
+	}
+
+	@include getBreakpoint(lg) {
+		&_toggle {
+			display: block;
+			cursor: pointer;
+		}
+
+		#burger-toggle:checked ~ &_mobile_tabs {
+			top: 65px;
+			display: block !important;
+		}
+		&_mobile_tabs {
+			top: 0;
+			inset: 0;
+			width: 102%;
+			display: block;
+			position: fixed;
+			display: none !important;
+
+			&_list {
+				gap: 0.8rem;
+				display: flex;
+				padding: 3rem 0;
+				text-align: center;
+				align-items: center;
+				flex-direction: column;
+				background-color: $color-dark;
+			}
+		}
+
+		&_logo {
+			flex: 1;
+		}
+
+		&_tabs {
+			display: none;
+		}
+	}
+
+	@include getBreakpoint(md) {
+		&_logo {
+			flex: unset;
+		}
+	}
+}

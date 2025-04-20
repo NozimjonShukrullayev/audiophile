@@ -1,0 +1,46 @@
+.flex {
+	display: flex;
+}
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.items-center {
+	align-items: center;
+}
+
+.relative {
+	position: relative;
+}
+
+.section-border-b {
+	width: 100%;
+	margin: auto;
+	fill: $color-white;
+	border-bottom: 1.5px solid #3a3a3a;
+}
+
+.gap-30 {
+	gap: $gap-30;
+}
+
+.navigation_list a {
+	color: $color-white;
+	font-size: 0.8125rem;
+	text-transform: $text-uppercase;
+	letter-spacing: $spacing-primary;
+	transition: ease $transition-time;
+	font-weight: $font-weight-primary;
+
+	&:hover {
+		color: $color-primary;
+	}
+}
+
+.color-primary {
+	color: $color-primary;
+}

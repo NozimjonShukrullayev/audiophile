@@ -1,0 +1,14 @@
+// =========== File sequence is important ===========
+@import '../abstract/variables';
+@import '../abstract/mixins';
+@import '../base/reset';
+@import '../base/typography';
+@import '../base/utilities';
+@import '../components/button';
+@import '../layout/container';
+@import '../layout/navbar';
+@import '../layout/footer';
+@import '../sections/home/header-hero';
+@import '../sections/home/products';
+@import '../sections/shared/categories';
+@import '../sections/shared/about';

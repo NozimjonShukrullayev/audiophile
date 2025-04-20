@@ -1,0 +1,26 @@
+.button-primary {
+	@include getButtonStyles(btn-primary);
+}
+.button-dark {
+	@include getButtonStyles(btn-dark);
+}
+.button-secondary {
+	@include getButtonStyles(btn-secondary);
+}
+.button-thirdy {
+	@include getButtonStyles(btn-thirdy);
+}
+.back-button {
+	color: inherit;
+	display: block;
+	font-weight: 500;
+	font-size: 0.93rem;
+	opacity: $opacity-50;
+	margin-block-end: 3.5rem;
+	margin-block-start: 4.93rem;
+
+	@include getBreakpoint(lg) {
+		margin-block-end: 2rem;
+		margin-block-start: 2.06rem;
+	}
+}

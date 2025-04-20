@@ -1,0 +1,50 @@
+.about {
+	&_container {
+		display: grid;
+		grid-gap: 2.5rem;
+		align-items: center;
+		padding: $paddingy-122;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	&_subgroup {
+		gap: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-inline: unset;
+		grid-row: unset;
+		text-align: unset;
+
+		p {
+			opacity: $opacity-50;
+		}
+	}
+	&_picture {
+		grid-row: 1;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 8px;
+	}
+
+	@include getBreakpoint(lg) {
+		&_container {
+			padding: $paddingy-26;
+			grid-template-columns: 1fr;
+			padding-block-end: 5rem;
+		}
+
+		&_subgroup {
+			order: 2 !important;
+			margin-inline: 4rem;
+			text-align: center;
+		}
+	}
+
+	@include getBreakpoint(md) {
+		&_subgroup {
+			margin-inline: unset;
+		}
+	}
+}

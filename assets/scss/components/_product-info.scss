@@ -1,0 +1,52 @@
+.product-info {
+	&_container {
+		gap: 7.81rem;
+		display: grid;
+		align-items: center;
+		padding-block-end: 5rem;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	&_picture {
+		width: 100%;
+		height: auto;
+		border-radius: $rounded-8;
+	}
+
+	&_subgroup {
+		display: grid;
+
+		&_level2 {
+			gap: 1rem;
+			display: flex;
+		}
+	}
+
+	@include getBreakpoint(lg) {
+		&_container {
+			gap: 4.31rem;
+			padding-block-end: 3.75rem;
+			margin-block-start: 1.93rem;
+		}
+
+		&_subgroup {
+			gap: 1rem;
+
+			&_level2 {
+				margin-block-start: 1rem;
+			}
+		}
+	}
+
+	@include getBreakpoint(md) {
+		&_container {
+			gap: 2rem;
+			padding-block-end: 2.75rem;
+			grid-template-columns: unset;
+		}
+
+		&_subgroup {
+			gap: 0.75rem;
+		}
+	}
+}

@@ -1,0 +1,38 @@
+@mixin getBreakpoint($breakpoint) {
+	$size: map-get($breakpoints, $breakpoint);
+	@if $size {
+		@media (width <= $size) {
+			@content;
+		}
+	} @else {
+		@warn "No value found for `#{$breakpoint}` in $breakpoints.";
+	}
+}
+
+@mixin getTypographyStyles($type) {
+	$typography: map-get($typographyObj, $type);
+	font-size: map-get($typography, size);
+	line-height: map-get($typography, line-space);
+	color: map-get($typography, color);
+	font-weight: map-get($typography, weight);
+	text-transform: map-get($typography, transform);
+	letter-spacing: map-get($typography, letter-space);
+}
+
+@mixin getButtonStyles($type) {
+	$style: map-get($button-colors, $type);
+	letter-spacing: 1px;
+	padding: 0.9rem 2rem;
+	font-size: $font-size-primary;
+	color: map-get($style, color);
+	text-transform: $text-uppercase;
+	border: map-get($style, border);
+	transition: $transition-time ease;
+	font-weight: $font-weight-primary;
+	background-color: map-get($style, bg);
+
+	&:hover {
+		color: map-get($style, hover-color);
+		background-color: map-get($style, hover-bg);
+	}
+}

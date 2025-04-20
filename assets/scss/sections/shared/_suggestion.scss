@@ -1,0 +1,49 @@
+.suggestion {
+	&_container {
+		padding-block: 5rem 4rem;
+		text-align: center;
+	}
+
+	&_products_wrapper {
+		display: flex;
+		gap: 1.875rem;
+		margin-block-start: 4rem;
+	}
+
+	&_product {
+		display: grid;
+		gap: 2rem;
+
+		&_picture {
+			width: 100%;
+			height: auto;
+			border-radius: $rounded-8;
+		}
+	}
+
+	@include getBreakpoint(lg) {
+		&_container {
+			padding-block-start: 3.75rem;
+			padding-block-end: 5.37rem;
+		}
+
+		&_products_wrapper {
+			flex-direction: row;
+			gap: 0.68rem;
+			margin-block-start: 3.5rem;
+		}
+	}
+
+	@include getBreakpoint(md) {
+		// &_container {
+		// 	padding-block-start: 3.75rem;
+		// 	padding-block-end: 5.37rem;
+		// }
+
+		&_products_wrapper {
+			flex-direction: column;
+			gap: 3.5rem;
+			margin-block-start: 2.5rem;
+		}
+	}
+}

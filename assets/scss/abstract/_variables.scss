@@ -1,0 +1,188 @@
+// fonts
+$body-font: 'Manrope', sans-serif;
+$body-lineheight: 1.6rem; // 25px
+$text-uppercase: uppercase;
+$font-weight-primary: 700;
+$font-size-primary: 0.81rem;
+$spacing-primary: 0.125rem;
+
+// boxing models
+$paddingy-16: 1rem 0;
+$paddingx-16: 0 1rem;
+$paddingy-26: 1.69rem 0;
+$paddingx-26: 0 1.69rem;
+$paddingy-122: 7.69rem 0;
+$paddingx-122: 0 7.69rem;
+$marginy-24: 1.5rem 0;
+$marginx-24: 0 1.5rem;
+
+// transition time
+$transition-time: 0.3s;
+
+// gap
+$gap-20: 1.18rem;
+$gap-30: 1.88rem;
+
+// border radius
+$rounded-8: 0.5rem;
+
+// opacity
+$opacity-50: 50%;
+$opacity-75: 75%;
+$opacity-100: 100%;
+
+// Primary colors
+$color-primary: #d87d4a;
+$color-secondary: #fbaf85;
+
+// Grayscale / Neutral
+$color-black: #000000;
+$color-dark: #191919;
+$color-darkest: #101010;
+$color-white: #ffffff;
+$color-light-1: #fafafa;
+$color-light-2: #f1f1f1;
+$color-section-border: #313131;
+
+// Breakpoints for responsive
+$breakpoints: (
+	xs: 480px,
+	sm: 640px,
+	md: 768px,
+	lg: 1024px,
+	xl: 1280px,
+	xxl: 1440px,
+);
+
+// typographies
+$typographyObj: (
+	heading1: (
+		size: 3.5rem,
+		letter-space: 0.125rem,
+		line-space: 3.65rem,
+		transform: uppercase,
+		weight: $font-weight-primary,
+	),
+	heading2: (
+		size: 2.5rem,
+		letter-space: 0.09rem,
+		line-space: 2.9rem,
+		transform: uppercase,
+		weight: $font-weight-primary,
+	),
+	heading3: (
+		size: 2rem,
+		letter-space: 0.07rem,
+		line-space: 2.3rem,
+		transform: uppercase,
+		weight: $font-weight-primary,
+	),
+	heading4: (
+		size: 1.75rem,
+		letter-space: $spacing-primary,
+		line-space: 2.37rem,
+		transform: uppercase,
+		weight: $font-weight-primary,
+	),
+	heading5: (
+		size: 1.5rem,
+		letter-space: 0.106rem,
+		line-space: 2.06rem,
+		transform: uppercase,
+		weight: $font-weight-primary,
+	),
+	heading6: (
+		size: 1.125rem,
+		letter-space: 0.081rem,
+		line-space: 1.5rem,
+		transform: uppercase,
+		weight: $font-weight-primary,
+	),
+	overline: (
+		size: 0.875rem,
+		weight: 400,
+		letter-space: 0.625rem,
+		line-space: 0.56rem,
+		color: $color-primary,
+		transform: uppercase,
+	),
+	subtitle: (
+		size: 0.8125rem,
+		weight: $font-weight-primary,
+		letter-space: 0.0625rem,
+		line-space: 1.56rem,
+		color: $color-primary,
+		transform: uppercase,
+	),
+	paragraph: (
+		size: 0.935rem,
+		weight: 500,
+		line-space: 1.6rem,
+		transform: initial,
+		letter-space: 0.0325rem,
+		color: $color-black,
+	),
+	product-price: (
+		size: 1.125rem,
+		weight: $font-weight-primary,
+		letter-space: 0.08rem,
+		line-space: $spacing-primary,
+		color: $color-black,
+		transform: uppercase,
+	),
+	// sizes for mobile
+	heading1-mob:
+		(
+			size: 2.25rem,
+			letter-space: 0.08rem,
+			line-space: 2.5rem,
+			transform: uppercase,
+			weight: $font-weight-primary,
+		),
+	heading2-mob: (
+		size: 1.75rem,
+		letter-space: 0.0625rem,
+		line-space: auto,
+		transform: uppercase,
+		weight: $font-weight-primary,
+	),
+	heading6-mob: (
+		size: 0.9rem,
+		letter-space: 0.07rem,
+		line-space: auto,
+		transform: uppercase,
+		weight: $font-weight-primary,
+	),
+);
+
+// buttons
+$button-colors: (
+	btn-primary: (
+		bg: $color-primary,
+		color: $color-white,
+		hover-bg: $color-secondary,
+		hover-color: $color-white,
+		border: none,
+	),
+	btn-dark: (
+		bg: $color-black,
+		color: $color-white,
+		hover-bg: #4c4c4c,
+		hover-color: $color-white,
+		border: 1px solid $color-black,
+	),
+	btn-secondary: (
+		bg: transparent,
+		color: $color-black,
+		hover-bg: $color-black,
+		hover-color: $color-white,
+		border: 1px solid $color-black,
+	),
+	btn-thirdy: (
+		bg: transparent,
+		color: $color-black,
+		hover-bg: transparent,
+		hover-color: $color-primary,
+		border: none,
+	),
+);

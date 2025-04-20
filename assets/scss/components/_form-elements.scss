@@ -1,0 +1,40 @@
+.quantity-container {
+	width: 7.5rem;
+
+	.quantity-wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		position: relative;
+		margin-inline-start: auto;
+		background-color: $color-light-2;
+
+		.quantity-button {
+			flex: 1 1;
+			opacity: 25%;
+			border: none;
+			padding-inline: 0.75rem;
+			letter-spacing: 0.0625rem;
+			transition: $transition-time;
+			background-color: transparent;
+			font-size: $font-size-primary;
+			font-weight: $font-weight-primary;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+		.selected-item-quantity {
+			flex: 1 1;
+			width: 100%;
+			border: none;
+			height: 100%;
+			appearance: none;
+			text-align: center;
+			letter-spacing: 0.0625rem;
+			font-size: $font-size-primary;
+			background-color: transparent;
+			font-weight: $font-weight-primary;
+		}
+	}
+}

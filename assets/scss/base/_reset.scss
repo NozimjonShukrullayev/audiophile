@@ -1,0 +1,55 @@
+/* Reset styles */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+	color: $color-black;
+	font-family: $body-font;
+	line-height: $body-lineheight;
+	background-color: $color-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+	background: none;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+article {
+	unicode-bidi: isolate;
+}
+img {
+	overflow-clip-margin: content-box;
+	overflow: clip;
+}
